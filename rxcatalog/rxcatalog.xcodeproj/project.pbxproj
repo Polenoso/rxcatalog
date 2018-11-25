@@ -27,6 +27,7 @@
 		D4D765D421AAA96200FBA379 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4D765BE21AAA96100FBA379 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D4D765DC21AAAAA000FBA379 /* Catalogs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D765DB21AAAAA000FBA379 /* Catalogs.storyboard */; };
 		D4D765DE21AAAADC00FBA379 /* CatalogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D765DD21AAAADC00FBA379 /* CatalogsViewController.swift */; };
+		D4D765E021AAAEB000FBA379 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D765DF21AAAEB000FBA379 /* Networking.swift */; };
 		DA2A74E15D68E270540E8480 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CC333B25D54D9D49575B7E /* Pods_Domain.framework */; };
 		FEE19563AD500F17E76F3FA2 /* Pods_rxcatalogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381C6F93582F2441B4EF98BD /* Pods_rxcatalogTests.framework */; };
 /* End PBXBuildFile section */
@@ -137,6 +138,7 @@
 		D4D765CF21AAA96200FBA379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4D765DB21AAAAA000FBA379 /* Catalogs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Catalogs.storyboard; sourceTree = "<group>"; };
 		D4D765DD21AAAADC00FBA379 /* CatalogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogsViewController.swift; sourceTree = "<group>"; };
+		D4D765DF21AAAEB000FBA379 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		D9170E495366DDFCD786A7A4 /* Pods-DomainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DomainTests/Pods-DomainTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E37414E854ACBA38321A5E95 /* Pods-rxcatalog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxcatalog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rxcatalog/Pods-rxcatalog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -339,6 +341,7 @@
 			children = (
 				D4D765C021AAA96100FBA379 /* Networking.h */,
 				D4D765C121AAA96100FBA379 /* Info.plist */,
+				D4D765DF21AAAEB000FBA379 /* Networking.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				D4D7657C21AAA5CB00FBA379 /* Sources */,
 				D4D7657D21AAA5CB00FBA379 /* Frameworks */,
 				D4D7657E21AAA5CB00FBA379 /* Resources */,
+				1079E4CE398405D0D3DD2102 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -540,6 +544,7 @@
 					};
 					D4D765BD21AAA96100FBA379 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					D4D765C521AAA96200FBA379 = {
 						CreatedOnToolsVersion = 10.1;
@@ -619,6 +624,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1079E4CE398405D0D3DD2102 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-rxcatalogTests/Pods-rxcatalogTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rxcatalogTests/Pods-rxcatalogTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		13BF982A0B7ACB844790F041 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -695,16 +730,22 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DomainTests/Pods-DomainTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -796,6 +837,9 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-NetworkingTests/Pods-NetworkingTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 			);
@@ -805,6 +849,9 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 			);
@@ -874,6 +921,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4D765E021AAAEB000FBA379 /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1057,6 +1105,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E37414E854ACBA38321A5E95 /* Pods-rxcatalog.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UE55G86CF4;
@@ -1076,6 +1125,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C110B4885C0EAD87D3C3CF2E /* Pods-rxcatalog.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UE55G86CF4;
@@ -1239,6 +1289,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 29CEAFBC2878C1E688B880BC /* Pods-Networking.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1257,6 +1308,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.polenoso.Networking;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1268,6 +1320,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A30CE38DEB8898E1BDEBB6FC /* Pods-Networking.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
