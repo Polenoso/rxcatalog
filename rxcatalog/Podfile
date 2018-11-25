@@ -15,9 +15,9 @@ def rx_alamofire
 end
 
 def test_pods
-#  pod 'RxTest'
-#  pod 'RxBlocking'
- # pod 'Nimble'
+ pod 'RxTest'
+ pod 'RxBlocking'
+ pod 'Nimble'
 end
 
 
