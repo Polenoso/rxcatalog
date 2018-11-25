@@ -28,6 +28,12 @@
 		D4D765DC21AAAAA000FBA379 /* Catalogs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D765DB21AAAAA000FBA379 /* Catalogs.storyboard */; };
 		D4D765DE21AAAADC00FBA379 /* CatalogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D765DD21AAAADC00FBA379 /* CatalogsViewController.swift */; };
 		D4D765E021AAAEB000FBA379 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D765DF21AAAEB000FBA379 /* Networking.swift */; };
+		D4D765E221AAB82B00FBA379 /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D765E121AAB82B00FBA379 /* Catalog.swift */; };
+		D4D765E421AAB95100FBA379 /* CouponButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D765E321AAB95100FBA379 /* CouponButton.swift */; };
+		D4D765E621AAB9D200FBA379 /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D765E521AAB9D200FBA379 /* Coupon.swift */; };
+		D4D765E821AABA5F00FBA379 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D765E721AABA5F00FBA379 /* Store.swift */; };
+		D4D765EA21AABC4100FBA379 /* CatalogUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D765E921AABC4100FBA379 /* CatalogUseCase.swift */; };
+		D4D765EC21AABCF600FBA379 /* UseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D765EB21AABCF600FBA379 /* UseCaseProtocol.swift */; };
 		DA2A74E15D68E270540E8480 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CC333B25D54D9D49575B7E /* Pods_Domain.framework */; };
 		FEE19563AD500F17E76F3FA2 /* Pods_rxcatalogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381C6F93582F2441B4EF98BD /* Pods_rxcatalogTests.framework */; };
 /* End PBXBuildFile section */
@@ -139,6 +145,12 @@
 		D4D765DB21AAAAA000FBA379 /* Catalogs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Catalogs.storyboard; sourceTree = "<group>"; };
 		D4D765DD21AAAADC00FBA379 /* CatalogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogsViewController.swift; sourceTree = "<group>"; };
 		D4D765DF21AAAEB000FBA379 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		D4D765E121AAB82B00FBA379 /* Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
+		D4D765E321AAB95100FBA379 /* CouponButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponButton.swift; sourceTree = "<group>"; };
+		D4D765E521AAB9D200FBA379 /* Coupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
+		D4D765E721AABA5F00FBA379 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		D4D765E921AABC4100FBA379 /* CatalogUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogUseCase.swift; sourceTree = "<group>"; };
+		D4D765EB21AABCF600FBA379 /* UseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProtocol.swift; sourceTree = "<group>"; };
 		D9170E495366DDFCD786A7A4 /* Pods-DomainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DomainTests/Pods-DomainTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E37414E854ACBA38321A5E95 /* Pods-rxcatalog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxcatalog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rxcatalog/Pods-rxcatalog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -325,6 +337,8 @@
 		D4D765B721AAA92B00FBA379 /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
+				D4D765E921AABC4100FBA379 /* CatalogUseCase.swift */,
+				D4D765EB21AABCF600FBA379 /* UseCaseProtocol.swift */,
 			);
 			path = "Use Cases";
 			sourceTree = "<group>";
@@ -332,6 +346,10 @@
 		D4D765B821AAA93900FBA379 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				D4D765E121AAB82B00FBA379 /* Catalog.swift */,
+				D4D765E321AAB95100FBA379 /* CouponButton.swift */,
+				D4D765E521AAB9D200FBA379 /* Coupon.swift */,
+				D4D765E721AABA5F00FBA379 /* Store.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -537,6 +555,7 @@
 					};
 					D4D7659821AAA92200FBA379 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					D4D765A021AAA92300FBA379 = {
 						CreatedOnToolsVersion = 10.1;
@@ -906,6 +925,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4D765E621AAB9D200FBA379 /* Coupon.swift in Sources */,
+				D4D765EC21AABCF600FBA379 /* UseCaseProtocol.swift in Sources */,
+				D4D765E221AAB82B00FBA379 /* Catalog.swift in Sources */,
+				D4D765E421AAB95100FBA379 /* CouponButton.swift in Sources */,
+				D4D765EA21AABC4100FBA379 /* CatalogUseCase.swift in Sources */,
+				D4D765E821AABA5F00FBA379 /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1189,6 +1214,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B6DE24246F36E57B0281D032 /* Pods-Domain.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1207,6 +1233,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.polenoso.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1218,6 +1245,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 42E06B37C38D15707736B1DB /* Pods-Domain.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
