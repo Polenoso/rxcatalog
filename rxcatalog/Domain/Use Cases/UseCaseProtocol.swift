@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-protocol UseCaseProtocol {
+public protocol UseCaseProtocol: class {
     //Implementing CRUD operations
     associatedtype UseCaseEntity
     func fetch() -> Observable<[UseCaseEntity]>

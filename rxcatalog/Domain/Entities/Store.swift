@@ -10,16 +10,16 @@ import Foundation
 
 public struct Store {
     
-    let distance: Double
-    let latitude: Double
-    let longitude: Double
-    let phone_number: String
-    let store_address: String
-    let store_city: String
-    let store_id: Int
-    let store_name: String
-    let store_zip_code: String
-    let web_url: String
+    public let distance: String
+    public let latitude: String
+    public let longitude: String
+    public let phone_number: String
+    public let store_address: String
+    public let store_city: String
+    public let store_id: String
+    public let store_name: String
+    public let store_zip_code: String
+    public let web_url: String
     
 }
 
