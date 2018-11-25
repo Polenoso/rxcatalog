@@ -9,8 +9,8 @@
 import Foundation
 
 public struct CouponButton {
-    let action: Int
-    let text: String
+    public let action: Int
+    public let text: String
 }
 
 extension CouponButton: Codable {

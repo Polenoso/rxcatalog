@@ -9,12 +9,12 @@
 import Foundation
 
 public struct Catalog {
-    let catalog_id: Int
-    let coupon: Coupon?
-    let date_end: Int
-    let nearest_store: Store
-    let retailer_id: Int
-    let retailer_name: String
+    public let catalog_id: String
+    public let coupon: Coupon?
+    public let date_end: String
+    public let nearest_store: Store?
+    public let retailer_id: String
+    public let retailer_name: String
     
 }
 

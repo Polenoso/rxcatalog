@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-protocol CatalogUseCase: UseCaseProtocol {
+public protocol CatalogUseCase: UseCaseProtocol {
     func fetch() -> Observable<[Catalog]>
     func fetch(_ id:Int) -> Observable<Catalog>
 }

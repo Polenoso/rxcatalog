@@ -9,14 +9,14 @@
 import Foundation
 
 public struct Coupon {
-    let buttons: [CouponButton]?
-    let description: String
+    public let buttons: [CouponButton]?
+    public let description: String
     
 }
 
 extension Coupon: Codable {
     enum CodingKeys: String, CodingKey {
-        case buttons
+        case buttons = "Buttons"
         case description
     }
 }
