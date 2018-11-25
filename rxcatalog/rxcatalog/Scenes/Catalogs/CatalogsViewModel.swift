@@ -13,12 +13,17 @@ import RxCocoa
 
 protocol CatalogsInput {
     func fetchCatalogs()
+    func catalogSelected(request: CatalogsModels.Input.Request)
 }
 
-final class CatalogsViewModel: CatalogsInput, ViewModelKind {
+protocol CatalogsDataStore {
+    var selectedCatalog: Catalog? { get }
+}
+
+final class CatalogsViewModel: CatalogsInput, ViewModelKind, CatalogsDataStore {
     
     typealias CatalogOutput = CatalogsModels.Output.Catalog.Displayed
-    
+    var selectedCatalog: Catalog?
     var dataSource: CatalogDataSourceProvider
     weak var output: CatalogsOutput?
     var catalogs: [Catalog]?
@@ -78,6 +83,10 @@ final class CatalogsViewModel: CatalogsInput, ViewModelKind {
             return CatalogOutput.init(image: nil, id: catalog.catalog_id, date: DateUtils.stringDate(from: catalog.date_end.toInt(), with: .displayed), businessName: catalog.retailer_name, type: .coupon)
         })
         return CatalogsModels.Output.Catalog.Sections.init(title: "Cupones".uppercased(), catalogs: presentedCoupons)
+    }
+    
+    func catalogSelected(request: CatalogsModels.Input.Request) {
+        selectedCatalog = catalogs?.filter({$0.catalog_id == request.id}).first
     }
     
 }

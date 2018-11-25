@@ -47,6 +47,13 @@
 		D4D7660821AB07FE00FBA379 /* CatalogSectionHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4D7660621AB07FE00FBA379 /* CatalogSectionHeaderCollectionReusableView.xib */; };
 		D4D7660A21AB1BD400FBA379 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7660921AB1BD400FBA379 /* Date+Utils.swift */; };
 		D4D7660C21AB1CE800FBA379 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7660B21AB1CE800FBA379 /* String+Utils.swift */; };
+		D4D7660F21AB277600FBA379 /* CatalogDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D7660E21AB277600FBA379 /* CatalogDetail.storyboard */; };
+		D4D7661121AB2BA500FBA379 /* NearestStoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7661021AB2BA500FBA379 /* NearestStoreTableViewCell.swift */; };
+		D4D7661321AB2C5300FBA379 /* CatalogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7661221AB2C5300FBA379 /* CatalogDetailViewController.swift */; };
+		D4D7661521AB2D7900FBA379 /* CatalogDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7661421AB2D7900FBA379 /* CatalogDetailModels.swift */; };
+		D4D7661721AB2F9E00FBA379 /* CatalogDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7661621AB2F9E00FBA379 /* CatalogDetailViewModel.swift */; };
+		D4D7661921AB339C00FBA379 /* CatalogsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7661821AB339C00FBA379 /* CatalogsNavigator.swift */; };
+		D4D7661B21AB385700FBA379 /* CatalogDetailNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7661A21AB385700FBA379 /* CatalogDetailNavigator.swift */; };
 		DA2A74E15D68E270540E8480 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CC333B25D54D9D49575B7E /* Pods_Domain.framework */; };
 		FEE19563AD500F17E76F3FA2 /* Pods_rxcatalogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381C6F93582F2441B4EF98BD /* Pods_rxcatalogTests.framework */; };
 /* End PBXBuildFile section */
@@ -177,6 +184,13 @@
 		D4D7660621AB07FE00FBA379 /* CatalogSectionHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatalogSectionHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		D4D7660921AB1BD400FBA379 /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
 		D4D7660B21AB1CE800FBA379 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		D4D7660E21AB277600FBA379 /* CatalogDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CatalogDetail.storyboard; sourceTree = "<group>"; };
+		D4D7661021AB2BA500FBA379 /* NearestStoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestStoreTableViewCell.swift; sourceTree = "<group>"; };
+		D4D7661221AB2C5300FBA379 /* CatalogDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailViewController.swift; sourceTree = "<group>"; };
+		D4D7661421AB2D7900FBA379 /* CatalogDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailModels.swift; sourceTree = "<group>"; };
+		D4D7661621AB2F9E00FBA379 /* CatalogDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailViewModel.swift; sourceTree = "<group>"; };
+		D4D7661821AB339C00FBA379 /* CatalogsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogsNavigator.swift; sourceTree = "<group>"; };
+		D4D7661A21AB385700FBA379 /* CatalogDetailNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailNavigator.swift; sourceTree = "<group>"; };
 		D9170E495366DDFCD786A7A4 /* Pods-DomainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DomainTests/Pods-DomainTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E37414E854ACBA38321A5E95 /* Pods-rxcatalog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxcatalog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rxcatalog/Pods-rxcatalog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -304,6 +318,7 @@
 		D4D7658F21AAA71B00FBA379 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D4D7660D21AB274600FBA379 /* Catalog Detail */,
 				D4D7659321AAA7C400FBA379 /* Catalogs */,
 				D4D765F521AAC5A200FBA379 /* ViewModelType.swift */,
 			);
@@ -349,6 +364,7 @@
 				D4D7660221AAF55000FBA379 /* CatalogsCollectionViewCell.xib */,
 				D4D7660521AB07FE00FBA379 /* CatalogSectionHeaderCollectionReusableView.swift */,
 				D4D7660621AB07FE00FBA379 /* CatalogSectionHeaderCollectionReusableView.xib */,
+				D4D7661821AB339C00FBA379 /* CatalogsNavigator.swift */,
 			);
 			path = Catalogs;
 			sourceTree = "<group>";
@@ -410,6 +426,19 @@
 				D4D765CF21AAA96200FBA379 /* Info.plist */,
 			);
 			path = NetworkingTests;
+			sourceTree = "<group>";
+		};
+		D4D7660D21AB274600FBA379 /* Catalog Detail */ = {
+			isa = PBXGroup;
+			children = (
+				D4D7660E21AB277600FBA379 /* CatalogDetail.storyboard */,
+				D4D7661021AB2BA500FBA379 /* NearestStoreTableViewCell.swift */,
+				D4D7661221AB2C5300FBA379 /* CatalogDetailViewController.swift */,
+				D4D7661421AB2D7900FBA379 /* CatalogDetailModels.swift */,
+				D4D7661621AB2F9E00FBA379 /* CatalogDetailViewModel.swift */,
+				D4D7661A21AB385700FBA379 /* CatalogDetailNavigator.swift */,
+			);
+			path = "Catalog Detail";
 			sourceTree = "<group>";
 		};
 		DFB5A744B6ECE306E367629F /* Pods */ = {
@@ -639,6 +668,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4D7660821AB07FE00FBA379 /* CatalogSectionHeaderCollectionReusableView.xib in Resources */,
+				D4D7660F21AB277600FBA379 /* CatalogDetail.storyboard in Resources */,
 				D4D7660421AAF55000FBA379 /* CatalogsCollectionViewCell.xib in Resources */,
 				D4D7657A21AAA5CB00FBA379 /* LaunchScreen.storyboard in Resources */,
 				D4D765DC21AAAAA000FBA379 /* Catalogs.storyboard in Resources */,
@@ -950,17 +980,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4D765FA21AADDCC00FBA379 /* CatalogsModels.swift in Sources */,
+				D4D7661921AB339C00FBA379 /* CatalogsNavigator.swift in Sources */,
 				D4D7660A21AB1BD400FBA379 /* Date+Utils.swift in Sources */,
 				D4D765EE21AABF6200FBA379 /* Application.swift in Sources */,
+				D4D7661321AB2C5300FBA379 /* CatalogDetailViewController.swift in Sources */,
 				D4D7660C21AB1CE800FBA379 /* String+Utils.swift in Sources */,
 				D4D7660721AB07FE00FBA379 /* CatalogSectionHeaderCollectionReusableView.swift in Sources */,
+				D4D7661521AB2D7900FBA379 /* CatalogDetailModels.swift in Sources */,
 				D4D765F021AAC00700FBA379 /* DataSourceProvider.swift in Sources */,
+				D4D7661721AB2F9E00FBA379 /* CatalogDetailViewModel.swift in Sources */,
 				D4D765DE21AAAADC00FBA379 /* CatalogsViewController.swift in Sources */,
 				D4D7657021AAA5C900FBA379 /* AppDelegate.swift in Sources */,
 				D4D765F821AAC68B00FBA379 /* CatalogsViewModel.swift in Sources */,
+				D4D7661B21AB385700FBA379 /* CatalogDetailNavigator.swift in Sources */,
 				D4D765F221AAC1B100FBA379 /* CatalogApiProvider.swift in Sources */,
 				D4D765F421AAC24B00FBA379 /* APIProvider.swift in Sources */,
 				D4D7660321AAF55000FBA379 /* CatalogsCollectionViewCell.swift in Sources */,
+				D4D7661121AB2BA500FBA379 /* NearestStoreTableViewCell.swift in Sources */,
 				D4D765F621AAC5A200FBA379 /* ViewModelType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

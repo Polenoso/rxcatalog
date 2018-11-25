@@ -15,7 +15,7 @@ protocol CatalogsOutput : class {
 class CatalogsViewController: UIViewController {
     
     var input: CatalogsInput?
-    
+    var navigator: (CatalogsNavigator & CatalogsDataPassing)?
     var displayedCatalogs: CatalogsModels.Output.Catalog.ViewModel = CatalogsModels.Output.Catalog.ViewModel.init(data: [])
     
     @IBOutlet var catalogsCollectionView: UICollectionView!
@@ -33,8 +33,12 @@ class CatalogsViewController: UIViewController {
     fileprivate func setup() {
         let viewModel = CatalogsViewModel(dataSource: CatalogApiProvider.build())
         let output = self
+        let nav = CatalogsNavigatorMain()
+        nav.viewController = output
+        nav.dataStore = viewModel
         input = viewModel
         viewModel.output = output
+        output.navigator = nav
     }
 
     override func viewDidLoad() {
@@ -91,6 +95,12 @@ extension CatalogsViewController: UICollectionViewDataSource, UICollectionViewDe
             return view
         }
         return UICollectionReusableView()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let request = CatalogsModels.Input.Request.init(id: displayedCatalogs.data[indexPath.section].catalogs[indexPath.row].id)
+        input?.catalogSelected(request:request)
+        navigator?.navigateToDetail()
     }
 }
 
