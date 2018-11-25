@@ -1,0 +1,60 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '11.0'
+
+def rx_swift
+    pod 'RxSwift', '~> 4.0'
+end
+
+def rx_cocoa
+    pod 'RxCocoa', '~> 4.0'
+end
+
+def rx_alamofire
+  pod 'Alamofire'
+  pod 'RxAlamofire'
+end
+
+def test_pods
+ pod 'RxTest'
+ pod 'RxBlocking'
+ pod 'Nimble'
+end
+
+
+target 'rxcatalog' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+  rx_cocoa
+  rx_swift
+  target 'rxcatalogTests' do
+    inherit! :search_paths
+    test_pods
+  end
+
+end
+
+target 'Domain' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+  rx_swift
+  rx_cocoa
+
+  target 'DomainTests' do
+    inherit! :search_paths
+    test_pods
+  end
+
+end
+
+target 'Networking' do
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+    rx_swift
+    rx_alamofire
+
+    target 'NetworkingTests' do
+        inherit! :search_paths
+        test_pods
+    end
+    
+end
