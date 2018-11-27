@@ -40,6 +40,10 @@ enum CatalogsModels {
             struct ViewModel {
                 var data: [Sections]
             }
+            
+            struct ViewModelError {
+                let data: Error
+            }
         }
     }
 }

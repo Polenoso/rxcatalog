@@ -10,6 +10,7 @@ import UIKit
 
 protocol CatalogsOutput : class {
     func displayCatalogs(catalogs: CatalogsModels.Output.Catalog.ViewModel)
+    func displayError(error: CatalogsModels.Output.Catalog.ViewModelError)
 }
 
 class CatalogsViewController: UIViewController {
@@ -18,7 +19,7 @@ class CatalogsViewController: UIViewController {
     var navigator: (CatalogsNavigator & CatalogsDataPassing)?
     var displayedCatalogs: CatalogsModels.Output.Catalog.ViewModel = CatalogsModels.Output.Catalog.ViewModel.init(data: [])
     
-    @IBOutlet var catalogsCollectionView: UICollectionView!
+    @IBOutlet var catalogsCollectionView: UICollectionView?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -49,10 +50,10 @@ class CatalogsViewController: UIViewController {
     
     fileprivate func setupCollectionViews() {
         //Delegates and datasources are binded from Storyboard
-        catalogsCollectionView.register(UINib.init(nibName: String(describing: CatalogsCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: CatalogsCollectionViewCell.ReuseIdentifier)
-        catalogsCollectionView.register(UINib.init(nibName: String(describing: CatalogSectionHeaderCollectionReusableView.self), bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CatalogSectionHeaderCollectionReusableView.ReusableIdentifier)
+        catalogsCollectionView?.register(UINib.init(nibName: String(describing: CatalogsCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: CatalogsCollectionViewCell.ReuseIdentifier)
+        catalogsCollectionView?.register(UINib.init(nibName: String(describing: CatalogSectionHeaderCollectionReusableView.self), bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CatalogSectionHeaderCollectionReusableView.ReusableIdentifier)
         
-        if let flowLayout = catalogsCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+        if let flowLayout = catalogsCollectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = CGSize(width: 1, height: 1)
         }
     }
@@ -67,7 +68,14 @@ extension CatalogsViewController: CatalogsOutput {
     
     func displayCatalogs(catalogs: CatalogsModels.Output.Catalog.ViewModel) {
         displayedCatalogs = catalogs
-        catalogsCollectionView.reloadData()
+        catalogsCollectionView?.reloadData()
+    }
+    
+    func displayError(error: CatalogsModels.Output.Catalog.ViewModelError) {
+        let alert = UIAlertController(title: "Error", message: error.data.localizedDescription, preferredStyle: .alert)
+        let action = UIAlertAction(title: "ok", style: .destructive, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
     
 }
