@@ -11,6 +11,10 @@
 		9E04C12788B0C6A55B969AD1 /* Pods_rxcatalog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485714DD3208F6B60E22529F /* Pods_rxcatalog.framework */; };
 		D0AB9D9201083CF5235D16A6 /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E33B32D6798F10E138AD5D /* Pods_DomainTests.framework */; };
 		D0BF58FF7066F51812FFA356 /* Pods_NetworkingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48A89D71F26B25F753A004E5 /* Pods_NetworkingTests.framework */; };
+		D4151C5921AD878C00324938 /* CatalogsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4151C5821AD878C00324938 /* CatalogsViewModelTests.swift */; };
+		D4151C5B21AD944900324938 /* CatalogsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4151C5A21AD944900324938 /* CatalogsViewControllerTests.swift */; };
+		D4151C6021ADA37800324938 /* CatalogDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4151C5F21ADA37800324938 /* CatalogDetailViewModelTests.swift */; };
+		D4151C6221ADA80100324938 /* CatalogDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4151C6121ADA80100324938 /* CatalogDetailViewControllerTests.swift */; };
 		D4D7657021AAA5C900FBA379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7656F21AAA5C900FBA379 /* AppDelegate.swift */; };
 		D4D7657721AAA5CB00FBA379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D7657621AAA5CB00FBA379 /* Assets.xcassets */; };
 		D4D7657A21AAA5CB00FBA379 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D7657821AAA5CB00FBA379 /* LaunchScreen.storyboard */; };
@@ -142,6 +146,10 @@
 		B6DE24246F36E57B0281D032 /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
 		C110B4885C0EAD87D3C3CF2E /* Pods-rxcatalog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxcatalog.release.xcconfig"; path = "Pods/Target Support Files/Pods-rxcatalog/Pods-rxcatalog.release.xcconfig"; sourceTree = "<group>"; };
 		C5CC333B25D54D9D49575B7E /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4151C5821AD878C00324938 /* CatalogsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogsViewModelTests.swift; sourceTree = "<group>"; };
+		D4151C5A21AD944900324938 /* CatalogsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogsViewControllerTests.swift; sourceTree = "<group>"; };
+		D4151C5F21ADA37800324938 /* CatalogDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailViewModelTests.swift; sourceTree = "<group>"; };
+		D4151C6121ADA80100324938 /* CatalogDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailViewControllerTests.swift; sourceTree = "<group>"; };
 		D4D7656C21AAA5C900FBA379 /* rxcatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rxcatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D7656F21AAA5C900FBA379 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4D7657621AAA5CB00FBA379 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -264,6 +272,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D4151C5621AD876100324938 /* Scenes tests */ = {
+			isa = PBXGroup;
+			children = (
+				D4151C5C21ADA14900324938 /* Catalog Detail */,
+				D4151C5721AD876B00324938 /* Catalogs */,
+			);
+			path = "Scenes tests";
+			sourceTree = "<group>";
+		};
+		D4151C5721AD876B00324938 /* Catalogs */ = {
+			isa = PBXGroup;
+			children = (
+				D4151C5821AD878C00324938 /* CatalogsViewModelTests.swift */,
+				D4151C5A21AD944900324938 /* CatalogsViewControllerTests.swift */,
+			);
+			name = Catalogs;
+			sourceTree = "<group>";
+		};
+		D4151C5C21ADA14900324938 /* Catalog Detail */ = {
+			isa = PBXGroup;
+			children = (
+				D4151C5F21ADA37800324938 /* CatalogDetailViewModelTests.swift */,
+				D4151C6121ADA80100324938 /* CatalogDetailViewControllerTests.swift */,
+			);
+			name = "Catalog Detail";
+			sourceTree = "<group>";
+		};
 		D4D7656321AAA5C900FBA379 = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +344,7 @@
 		D4D7658321AAA5CB00FBA379 /* rxcatalogTests */ = {
 			isa = PBXGroup;
 			children = (
+				D4151C5621AD876100324938 /* Scenes tests */,
 				D4D7658421AAA5CB00FBA379 /* rxcatalogTests.swift */,
 				D4D7658621AAA5CB00FBA379 /* Info.plist */,
 			);
@@ -1005,7 +1041,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4151C6221ADA80100324938 /* CatalogDetailViewControllerTests.swift in Sources */,
+				D4151C5B21AD944900324938 /* CatalogsViewControllerTests.swift in Sources */,
+				D4151C5921AD878C00324938 /* CatalogsViewModelTests.swift in Sources */,
 				D4D7658521AAA5CB00FBA379 /* rxcatalogTests.swift in Sources */,
+				D4151C6021ADA37800324938 /* CatalogDetailViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
