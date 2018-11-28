@@ -27,6 +27,7 @@ class CatalogsCollectionViewCell: UICollectionViewCell {
         catalogRetailerName.text = viewModel.businessName
         couponLabel.isHidden = viewModel.type == .catalog
         isHidden = viewModel.type == .loading
+        catalogRetailerName.accessibilityIdentifier = "\(viewModel.type.rawValue)"
     }
 
 }

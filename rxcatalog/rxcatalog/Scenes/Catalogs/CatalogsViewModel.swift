@@ -49,7 +49,7 @@ final class CatalogsViewModel: CatalogsInput, ViewModelKind, CatalogsDataStore {
     }
     
     private func presentError(_ error: Error) {
-        
+        output?.displayError(error: CatalogsModels.Output.Catalog.ViewModelError.init(data: error))
     }
     
     private func presentLoading() {
