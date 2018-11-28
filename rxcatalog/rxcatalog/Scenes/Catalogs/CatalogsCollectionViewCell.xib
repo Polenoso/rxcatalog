@@ -13,41 +13,41 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CatalogsCollectionViewCell" customModule="rxcatalog" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="254" height="410"/>
+            <rect key="frame" x="0.0" y="0.0" width="274" height="410"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="254" height="410"/>
+                <rect key="frame" x="0.0" y="0.0" width="274" height="410"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FDe-4n-PZg" userLabel="Container View">
-                        <rect key="frame" x="0.0" y="0.0" width="254" height="410"/>
+                        <rect key="frame" x="0.0" y="0.0" width="274" height="410"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favorites" translatesAutoresizingMaskIntoConstraints="NO" id="zDU-AA-CZS">
-                                <rect key="frame" x="213" y="8" width="25" height="25"/>
+                                <rect key="frame" x="233" y="8" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="65r-Hl-A1P"/>
                                     <constraint firstAttribute="width" secondItem="zDU-AA-CZS" secondAttribute="height" multiplier="1:1" id="GhZ-G5-VAn"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aIF-Pu-7hU">
-                                <rect key="frame" x="16" y="348.5" width="222" height="45.5"/>
+                                <rect key="frame" x="16" y="369" width="242" height="25"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="save" translatesAutoresizingMaskIntoConstraints="NO" id="auG-81-fa1">
-                                        <rect key="frame" x="0.0" y="10.5" width="25" height="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="070-4t-5tX"/>
                                             <constraint firstAttribute="width" secondItem="auG-81-fa1" secondAttribute="height" multiplier="1:1" id="p8g-L6-FfP"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share" translatesAutoresizingMaskIntoConstraints="NO" id="0ng-l4-H9q">
-                                        <rect key="frame" x="33" y="10.5" width="25" height="25"/>
+                                        <rect key="frame" x="33" y="0.0" width="25" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="V1w-r1-4mR"/>
                                             <constraint firstAttribute="width" secondItem="0ng-l4-H9q" secondAttribute="height" multiplier="1:1" id="eKF-RR-FCO"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="au8-y1-7Py">
-                                        <rect key="frame" x="66" y="14.5" width="156" height="17"/>
+                                        <rect key="frame" x="66" y="4" width="176" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.5" green="1" blue="0.378356073943662" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -60,17 +60,18 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="exo-bK-lgf">
-                                <rect key="frame" x="16" y="49" width="222" height="283.5"/>
+                                <rect key="frame" x="16" y="49" width="242" height="304"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3SD-Pf-IQl">
-                                        <rect key="frame" x="0.0" y="0.0" width="221" height="255"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="242" height="275.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="catalog" translatesAutoresizingMaskIntoConstraints="NO" id="7My-Yn-dcs">
-                                                <rect key="frame" x="0.0" y="0.0" width="221" height="255"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="242" placeholderIntrinsicHeight="255" image="catalog" translatesAutoresizingMaskIntoConstraints="NO" id="7My-Yn-dcs">
+                                                <rect key="frame" x="0.0" y="0.0" width="242" height="275.5"/>
                                             </imageView>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cupon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYq-rV-JVO">
-                                                <rect key="frame" x="0.0" y="220" width="221" height="35"/>
+                                                <rect key="frame" x="0.0" y="240.5" width="242" height="35"/>
                                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="lbl_coupon_tag"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="oa9-jj-iNc"/>
                                                 </constraints>
@@ -91,7 +92,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MO2-E1-NTp">
-                                        <rect key="frame" x="0.0" y="263" width="42" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="283.5" width="42" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -121,18 +122,18 @@
                 <constraint firstItem="FDe-4n-PZg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xV2-7O-NH9"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="254" height="410"/>
+            <size key="customSize" width="274" height="410"/>
             <connections>
                 <outlet property="catalogEndDate" destination="au8-y1-7Py" id="h7C-CB-8F0"/>
                 <outlet property="catalogImageView" destination="7My-Yn-dcs" id="IkV-Dn-jo7"/>
                 <outlet property="catalogRetailerName" destination="MO2-E1-NTp" id="bdi-lY-8Sg"/>
                 <outlet property="couponLabel" destination="WYq-rV-JVO" id="Omt-Jh-c5x"/>
             </connections>
-            <point key="canvasLocation" x="241.59999999999999" y="184.40779610194903"/>
+            <point key="canvasLocation" x="257.60000000000002" y="184.40779610194903"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="catalog" width="221.75999450683594" height="255.36000061035156"/>
+        <image name="catalog" width="308" height="354"/>
         <image name="favorites" width="25" height="25"/>
         <image name="save" width="25" height="25"/>
         <image name="share" width="25" height="25"/>

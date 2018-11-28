@@ -20,7 +20,7 @@ enum CatalogsModels {
     enum Output {
         
         enum Catalog {
-            enum Tipo {
+            enum Tipo: String {
                 case coupon
                 case catalog
                 case loading
